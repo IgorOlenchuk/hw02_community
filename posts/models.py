@@ -22,7 +22,7 @@ class Post(models.Model):
                                on_delete=models.CASCADE,
                                related_name='posts')
     group = models.ForeignKey(Group,
-                              on_delete=models.PROTECT,
+                              on_delete=models.SET_NULL,
                               related_name='posts',
                               blank=True, null=True)
 
